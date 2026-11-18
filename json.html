@@ -1,0 +1,40 @@
+<html>
+	<head><title>JSON INPUT OUTPUT</title></head>
+	<body>
+		<style>
+			h2{color: blue;
+				background-color:red;
+				text-align: center;
+				height:120px;
+				width:300px;}
+			p{color:black;
+				background-color:blue;
+				text-align:center;
+				height:120px;
+				width:300px;}
+				
+		</style>
+		<script>
+			function reset(){
+				document.getElementById("name").value=""
+				document.getElementById("class").value=''}
+				
+			function submit(){
+				let nam=document.getElementById("name").value
+				let clas=document.getElementById("class").value
+				let obj={"name":nam,
+					"class":clas}
+				document.getElementById("result").innerHTML='WELCOME<br>'+'name:'+obj["name"]+'<br>'+"class:"+obj['class']+"<br>"
+				reset()}
+
+		</script>
+		<h2>STUDENT DETAILS<br>
+			name:<input type="text" id="name"><br>
+			class:<input type="text" id='class'><br>
+			<button onclick='submit()' >submit</button>      
+			<button onclick='reset()' >reset</button>
+		</h2>
+		<p id='result'>WELCOME<br></p>
+		
+	</body>
+</html>
